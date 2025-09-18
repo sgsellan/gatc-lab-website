@@ -1,0 +1,43 @@
+.person img { max-width: 220px; }
+.role { color: var(--muted); font-weight: 600; }
+
+.person-block {
+  display: grid; grid-template-columns: 140px 1fr; gap: 1rem;
+  padding: 1rem; border: 1px solid #e5e7eb; border-radius: 12px; background: #fff; margin-bottom: 1rem;
+}
+.person-block-media img {
+  width: 100%; height: auto; border-radius: 10px; border: 1px solid #e5e7eb; object-fit: cover;
+}
+.person-block-body { display: grid; gap: .35rem; }
+.person-block .links { display: flex; gap: .5rem; }
+
+.group-photo img { width: 100%; height: auto; border-radius: 12px; border: 1px solid #e5e7eb; }
+
+@media (max-width: 640px) { .person-block { grid-template-columns: 1fr; } }
+
+.person-block .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.person-block .links a {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: #1f2a44;
+  transition: all 0.2s ease;
+}
+
+.person-block .links a:hover {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: white;
+  transform: translateY(-2px);
+}

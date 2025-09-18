@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Title of the latest paper",
+    "year": 2025,
+    "authors": ["A. Author", "B. Author", "Silvia Sellán"],
+    "venue": "SIGGRAPH 2025",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image": "assets/img/papers/paper1.jpg",
+    "links": { "pdf": "#", "code": "#", "video": "#" }
+  }
+]
