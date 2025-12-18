@@ -52,7 +52,7 @@
   padding: 8px 10px;
   border-radius: 8px;
   text-decoration: none;
-  color: #1f2a44;
+  color: var(--columbiablue);
   border: 1px solid transparent;
   font-weight: 600;
   line-height: 1.2;

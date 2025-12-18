@@ -2,8 +2,8 @@ id: silvia
 name: Silvia Sellán
 role: PI
 image: people/silvia/silvia.jpg
-bio: |
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+# bio: |
+#   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 links:
   - label: Website
     url: https://cs.columbia.edu/~silviasellan

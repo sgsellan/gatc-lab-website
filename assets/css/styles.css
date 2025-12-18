@@ -11,6 +11,7 @@
       --accent1: #4b6bff;
       --accent2: #ab2673;
       --radius: 14px;
+  --columbiablue: #75aadb;
     }
 body {
 margin: 0;
@@ -25,17 +26,22 @@ padding: 1rem 2rem; max-width: 1200px; margin: 0 auto;
 }
 .logo img { height: auto; max-height: 150px; max-width: 100%; }
 nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
-nav a { text-decoration: none; color: #1f2a44; font-weight: 500; font-size: 1rem; position: relative; transition: color .2s ease; }
+nav a { text-decoration: none; color: var(--columbiablue); font-weight: 500; font-size: 1rem; position: relative; transition: color .2s ease; }
 nav a::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px; background: var(--pink); transition: width .25s ease; }
 nav a:hover { color: var(--pink); }
 nav a:hover::after { width: 100%; }
 nav a.active { color: var(--pink); }
 
+/* Header nav: make top-level links black by default (hover stays pink) */
+header.main nav a { color: var(--black); }
+header.main nav a:visited { color: var(--black); }
+header.main nav a:hover { color: var(--pink); }
+
 
 .main { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
 
-.hero { display: flex; gap: 3rem; align-items: center; padding: 3rem .5rem; flex-wrap: wrap; }
+.hero { display: flex; gap: 3rem; align-items: center; padding: 3rem 2rem; flex-wrap: wrap; }
 .hero-left { flex: 1 1 300px; display: flex; flex-direction: column; gap: 2rem; }
 .hero-text { font-size: 1.2rem; line-height: 1.8rem; color: var(--gray); }
 .hero-text .highlight { color: var(--pink); font-weight: 700; }
@@ -52,7 +58,7 @@ nav a.active { color: var(--pink); }
 .hero-card div:first-child { font-size: 13px; color: var(--muted); }
 .hero-card div:last-child { font-weight: 700; margin-top: 6px; }
 
-.model-wrap { flex: 1 1 500px; display: flex; justify-content: center; align-items: center; min-height: 420px; }
+.model-wrap { flex: 1 1 490px; max-width: 55%; display: flex; justify-content: center; align-items: center; min-height: 420px; }
 model-viewer { width: 100%; max-width: 500px; height: 500px; aspect-ratio: auto; }
 
 .section { display: flex; flex-direction: column; gap: 2rem; padding: 3rem 2rem; }
@@ -92,6 +98,7 @@ button.btn:hover { background: #e9edf6; }
 .hero { flex-direction: column; text-align: center; }
 .hero-left { align-items: center; }
 .hero-cards { justify-content: center; }
+.model-wrap { max-width: 100%; }
 }
 @media (max-width: 600px) {
 nav { justify-content: center; }
@@ -124,3 +131,8 @@ model-viewer { max-width: 100%; height: 300px; aspect-ratio: 1 / 1; }
 }
 
 /* Debug width removed */
+
+/* Global link styles: Columbia blue, no underline; pink on hover */
+a { color: var(--columbiablue); text-decoration: none; }
+a:visited { color: var(--columbiablue); }
+a:hover { color: var(--pink); text-decoration: none; }

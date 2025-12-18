@@ -63,14 +63,17 @@ export function initNYCPointCloud(canvas) {
     geometry.scale(scale, scale, scale);
 
     const DPR = window.devicePixelRatio || 1;
+    // Sync color with CSS variable --columbiablue
+    const cssBlue = getComputedStyle(document.documentElement).getPropertyValue('--columbiablue').trim();
+    const columbiaBlue = cssBlue || '#B9D9EB';
     const material = new THREE.PointsMaterial({
       // Smaller points for better definition; normalize by DPR
-      size: 0.02 / DPR,
+      size: 0.025 / DPR,
       sizeAttenuation: true,
       // Force uniform lab accent color
       vertexColors: false,
-    //   color: 0xab2673
-      color: 0xB9D9EB
+      // color: 0xab2673
+      color: new THREE.Color(columbiaBlue)
     });
 
     const points = new THREE.Points(geometry, material);

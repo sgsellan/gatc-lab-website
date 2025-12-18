@@ -2,8 +2,8 @@ id: xiana
 name: Xiana Carrera Alonso
 role: PhD
 image: people/xiana/xiana.png
-bio: |
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+# bio: |
+#   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 links:
   - label: Website
     url: https://xianacarrera.github.io
