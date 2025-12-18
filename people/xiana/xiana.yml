@@ -2,8 +2,8 @@ id: xiana
 name: Xiana Carrera Alonso
 role: PhD
 image: people/xiana/xiana.png
-# bio: |
-#   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+bio: |
+  Xiana is a first-year PhD student in the Computer Science Department at Columbia University, where she conducts research on geometric modeling and implicit shape representations. Before Columbia, she completed a double BS degree in Mathematics and Informatics Engineering at the University of Santiago de Compostela.
 links:
   - label: Website
     url: https://xianacarrera.github.io

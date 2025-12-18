@@ -2,8 +2,8 @@ id: ningna
 name: Ningna Wang
 role: Postdoc
 image: people/ningna/ningna.jpg
-# bio: |
-#   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+bio: |
+  Ningna is a Postdoctoral Research Scientist in the Computer Science Department at Columbia University. Her research focuses on geometric modeling, with an emphasis on developing new representations and algorithms that make geometric data processing more efficient and effective. Before joining Columbia, she earned her PhD in Computer Science from The University of Texas at Dallas, an MS in Computer Science from Carnegie Mellon University, and a BS in Mathematics from Jilin University. 
 links:
   - label: Website
     url: https://ningnawang.github.io/

@@ -2,8 +2,9 @@ id: silvia
 name: Silvia Sellán
 role: PI
 image: people/silvia/silvia.jpg
-# bio: |
-#   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+bio: |
+  Silvia is an Assistant Professor in the Computer Science Department at Columbia University and the director of the *Geometry and the City* lab.
+  Before moving to Columbia, she obtained a PhD from the University of Toronto and worked as a postdoctoral researcher at MIT. She primarily works on Geometry Processing and Computer Graphics, and specializes in implicit geometric representations and surface reconstruction.
 links:
   - label: Website
     url: https://cs.columbia.edu/~silviasellan

@@ -45,6 +45,8 @@ header.main nav a:hover { color: var(--pink); }
 .hero-left { flex: 1 1 300px; display: flex; flex-direction: column; gap: 2rem; }
 .hero-text { font-size: 1.2rem; line-height: 1.8rem; color: var(--gray); }
 .hero-text .highlight { color: var(--pink); font-weight: 700; }
+/* Global highlight utility */
+.highlight { color: var(--pink); font-weight: 700; }
 .hero-text .labname { display: block; color: var(--black); font-weight: 800; font-size: 2rem; line-height: 2.2rem; margin-bottom: 1rem; }
 .quick-links { display: flex; gap: 12px; flex-wrap: wrap; }
 .qb { padding: 10px 16px; border-radius: 999px; font-weight: 600; font-size: 14px; background: var(--lightlightblue); border: 1px solid #e2e8f0; display: inline-flex; gap: 10px; align-items: center; transition: all .2s ease; text-decoration: none; color: var(--gray); }
@@ -74,6 +76,7 @@ model-viewer { width: 100%; max-width: 500px; height: 500px; aspect-ratio: auto;
 .people { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; }
 .person { text-align: center; font-size: 13px; }
 .person-link { text-decoration: none; color: inherit; }
+.person-link:link, .person-link:visited { color: inherit; }
 .person img { width: 100%; max-width: 180px; height: auto; aspect-ratio: 1/1; border-radius: 12px; object-fit: cover; border: 1px solid #e5e7eb; }
 
 

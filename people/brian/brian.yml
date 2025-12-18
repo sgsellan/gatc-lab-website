@@ -2,8 +2,8 @@ id: brian
 name: Hyunwoo (Brian) Kim
 role: PhD
 image: people/brian/brian.png
-# bio: |
-#   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+bio: |
+  Brian is a first-year Ph.D. student in the Computer Science Department at Columbia University. His research blends geometry processing, machine learning and computer vision to enhance user-interactibility in computer graphics. Prior to Columbia, he completed a BS in Statistics at the University of Chicago.
 links:
   - label: Website
     url: https://hywkim-brian.github.io/site/

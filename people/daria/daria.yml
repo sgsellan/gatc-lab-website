@@ -2,8 +2,8 @@ id: daria
 name: Daria Nogina
 role: PhD
 image: people/daria/daria.png
-# bio: |
-#   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+bio: |
+  Daria is a first-year PhD student at the Columbia University Computer Science Department. Her research interests lie at the intersection of geometry processing and fluid simulation, driven by practical applications in the medical domain. Before Columbia, she earned a degree in bioengineering and bioinformatics from Lomonosov Moscow State University, and worked as a research engineer in the medical vision startup IRA Labs.
 links:
   - label: Website
     url: https://noginadaria.github.io/

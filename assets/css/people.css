@@ -8,7 +8,10 @@
 .person-block-media img {
   width: 100%; height: auto; border-radius: 10px; border: 1px solid #e5e7eb; object-fit: cover;
 }
-.person-block-body { display: grid; gap: .35rem; }
+.person-block-media .role { text-align: center; margin-top: 8px; }
+.person-block-body { display: grid; gap: 1rem; }
+.person-block-body h4 { margin: 0; }
+.person-block-body p { margin: 0; }
 .person-block .links { display: flex; gap: .5rem; }
 
 .group-photo img { width: 100%; height: auto; border-radius: 12px; border: 1px solid #e5e7eb; }

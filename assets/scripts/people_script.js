@@ -67,7 +67,8 @@
   function renderPeoplePage(people){
     var root = document.getElementById('people-list');
     if (!root) return;
-    people.forEach(function(p){
+
+    function personArticle(p){
       var article = document.createElement('article');
       article.className = 'person-block';
       article.id = p.id;
@@ -78,6 +79,12 @@
       img.src = p.image;
       img.alt = p.name;
       media.appendChild(img);
+      if (p.role) {
+        var roleCap = document.createElement('div');
+        roleCap.className = 'role';
+        roleCap.textContent = p.role;
+        media.appendChild(roleCap);
+      }
 
       var body = document.createElement('div');
       body.className = 'person-block-body';
@@ -86,7 +93,7 @@
       body.appendChild(h4);
 
       var bio = document.createElement('p');
-      bio.textContent = (p.bio || '').trim();
+      bio.innerHTML = formatBio((p.bio || '').trim());
       body.appendChild(bio);
 
       if (Array.isArray(p.links) && p.links.length){
@@ -107,8 +114,44 @@
 
       article.appendChild(media);
       article.appendChild(body);
-      root.appendChild(article);
+      return article;
+    }
+
+    function rolePriority(p){
+      var r = (p.role || '').toLowerCase();
+      if (r === 'pi') return 0;
+      if (r === 'postdoc') return 1;
+      if (r === 'phd' || r === 'phd student' || r === 'phd students') return 2;
+      return 3;
+    }
+
+    // Stable sort by role priority while preserving manifest order within the same role
+    var indexMap = new Map();
+    people.forEach(function(p, i){ indexMap.set(p.id, i); });
+    var sorted = people.slice().sort(function(a, b){
+      var pa = rolePriority(a);
+      var pb = rolePriority(b);
+      if (pa !== pb) return pa - pb;
+      return (indexMap.get(a.id) - indexMap.get(b.id));
     });
+
+    var frag = document.createDocumentFragment();
+    sorted.forEach(function(p){
+      frag.appendChild(personArticle(p));
+    });
+    root.appendChild(frag);
+  }
+
+  // Convert *text* to <span class="highlight">text</span>
+  function formatBio(text){
+    if (!text) return '';
+    // Escape basic HTML to avoid unintended markup, then re-insert highlights
+    var escaped = text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+    // Replace emphasis markers with highlight span (greedy-safe)
+    return escaped.replace(/\*(.*?)\*/g, '<span class="highlight">$1</span>');
   }
 
   function renderHomePeople(people){
