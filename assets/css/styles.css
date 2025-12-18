@@ -52,7 +52,7 @@ nav a.active { color: var(--pink); }
 .hero-card div:first-child { font-size: 13px; color: var(--muted); }
 .hero-card div:last-child { font-weight: 700; margin-top: 6px; }
 
-.model-wrap { flex: 1 1 500px; display: flex; justify-content: center; align-items: center; }
+.model-wrap { flex: 1 1 500px; display: flex; justify-content: center; align-items: center; min-height: 420px; }
 model-viewer { width: 100%; max-width: 500px; height: 500px; aspect-ratio: auto; }
 
 .section { display: flex; flex-direction: column; gap: 2rem; padding: 3rem 2rem; }
@@ -111,3 +111,16 @@ model-viewer { max-width: 100%; height: 300px; aspect-ratio: 1 / 1; }
   transform: translateY(-8px);
   box-shadow: 0 22px 40px rgba(11,18,32,0.10);
 }
+
+/* Removed debug border; container size ensured via min-height above */
+
+
+/* --- Point cloud canvas --- */
+
+#nycCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Debug width removed */

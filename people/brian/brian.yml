@@ -1,0 +1,10 @@
+id: brian
+name: Hyunwoo (Brian) Kim
+role: PhD
+image: assets/img/labmember1.jpg
+bio: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+links:
+  - label: Website
+    url: https://hywkim-brian.github.io/site/
+home_display: true

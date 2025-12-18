@@ -1,36 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #ffffff;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            text-align: center;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Geometry Lab — Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<script src="assets/scripts/includes.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js" defer></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<!-- Import map to resolve bare specifiers used by three.js addons -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "/assets/scripts/vendor/three.module.js",
+    "three/addons/": "/assets/scripts/vendor/"
+  }
+}
+</script>
 </head>
 <body>
-    <div class="container">
-	    <h1>Coming Soon! <a href="demo.html">(tmp)</a></h1>
-        <img src="./lab-logo-01.png" alt="Coming Soon">
-    </div>
+<div data-include="assets/partials/header.html"></div>
+
+
+<main class="main">
+<section class="hero">
+<div class="hero-left">
+<div class="hero-text">
+<span class="labname">Columbia University<br/>Geometry and the City Lab</span>
+We work on both the theoretical foundations of <span class="highlight">geometry processing</span> and its practical use for positive <span class="highlight">real-world impact</span>.
+</div>
+<!-- <div class="quick-links">
+<a class="qb" href="publications.html"><span class="dot"></span> Latest Paper</a>
+<a class="qb" href="https://github.com/"><span class="dot" style="background:linear-gradient(90deg,var(--accent2),var(--accent1))"></span> Code & Datasets</a>
+<a class="qb" href="join.html"><span class="dot" style="background:linear-gradient(90deg,#6b7280,#cbd5e1)"></span> Join Us</a>
+</div> -->
+<!-- <div class="hero-cards">
+<div class="hero-card"><div>Upcoming</div><div>SIGGRAPH 2025 Demo</div></div>
+<div class="hero-card"><div>Open position</div><div>Masters student</div></div>
+</div> -->
+</div>
+<!-- <div class="model-wrap">
+<model-viewer src="assets/models/ball_ori.glb" alt="3D Geometry Model" auto-rotate rotation-per-second="10deg" camera-controls></model-viewer>
+</div> -->
+
+<div class="model-wrap">
+  <canvas id="nycCanvas"></canvas>
+</div>
+</section>
+
+
+<!-- WE WILL ACTIVATE THIS BETTER IN THE FUTURE -->
+<!-- <section class="section">
+  <h3>Featured Projects</h3>
+  <div class="grid" role="list">
+    
+
+    <a class="card-link" href="projects.html#project-agg" role="listitem">
+      <article class="card">
+        <div class="thumb">The Anti-Ghost-Gun certificate</div>
+        <h4>
+          We wish to design an algorithm that can be embedded in 3D printers to detect and stop the 3D printing of firearms
+        </h4>
+        <div class="meta">Paper · Code · Video</div>
+      </article>
+    </a>
+
+
+    <a class="card-link" href="projects.html#project-swept" role="listitem">
+      <article class="card">
+        <div class="thumb">Efficient swept volumes with continuation algorithms</div>
+        <h4>
+          This project will seek to generalize swept volumes computation to multi-dimensional trajectories and robotic movements.
+        </h4>
+        <div class="meta">Paper · Data</div>
+      </article>
+    </a>
+
+
+    <a class="card-link" href="projects.html#project-boulder" role="listitem">
+      <article class="card">
+        <div class="thumb">Geometry and Bouldering</div>
+        <h4>
+          We want to use geometric deep learning to predict the difficulties of bouldering routes and generate novel routes on existing climbing walls.
+        </h4>
+        <div class="meta">Paper · Code</div>
+      </article>
+    </a>
+
+  </div>
+</section> -->
+
+<section class="section">
+<h3>People</h3>
+<div id="home-people" class="people" role="list"></div>
+</section>
+</main>
+
+<div data-include="assets/partials/footer.html"></div>
+<!-- <script src="assets/scripts/script.js"></script> -->
+<script type="module" src="assets/scripts/main.js"></script>
+<script src="assets/scripts/people_script.js"></script>
 </body>
 </html>
-

@@ -7,81 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/people.css" />
+  <script src="assets/scripts/includes.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js" defer></script>
 </head>
 <body>
-  <header class="main">
-    <div class="logo"><a href="index.html" aria-label="Go to Home"><img src="assets/img/lab_logo.png" alt="Lab Logo" /></a></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="people.html">People</a>
-      <a href="publications.html">Publications</a>
-      <a href="join.html">Join Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div data-include="assets/partials/header.html"></div>
 
   <main class="main container-narrow">
     <section class="section" style="padding-top:1rem">
-      <h3>Principal Investigator</h3>
-      <article class="person-block" id="silvia">
-        <div class="person-block-media"><img src="assets/img/labmember3.jpg" alt="Prof. Silvia Sellán"/></div>
-        <div class="person-block-body">
-          <h4>Prof. Silvia Sellán </h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p class="links"><a href="https://www.silviasellan.com/" target="_blank">Website</a></p>
-        </div>
-      </article>
-    </section>
-
-    <section class="section" style="padding-top:0">
-      <h3>Postdocs</h3>
-      <article class="person-block" id="ningna">
-        <div class="person-block-media"><img src="assets/img/labmember2.jpg" alt="Dr. Ningna Wang"/></div>
-        <div class="person-block-body">
-          <h4>Dr. Ningna Wang </h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p class="links"><a href="https://ningnawang.github.io/" target="_blank">Website</a></p>
-        </div>
-      </article>
-    </section>
-
-    <section class="section" style="padding-top:0">
-      <h3>PhD Students</h3>
-      <article class="person-block" id="brian">
-        <div class="person-block-media"><img src="assets/img/labmember1.jpg" alt="Hyunwoo (Brian) Kim"/></div>
-        <div class="person-block-body">
-          <h4>Hyunwoo (Brian) Kim </h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p class="links"><a href="https://hywkim-brian.github.io/site/" target="_blank">Website</a></p>
-        </div>
-      </article>
-      <article class="person-block" id="xiana">
-        <div class="person-block-media"><img src="assets/img/labmember5.jpg" alt="Xiana Carrera Alonso"/></div>
-        <div class="person-block-body">
-          <h4>Xiana Carrera Alonso </h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p class="links"><a href="https://www.linkedin.com/in/xiana-carrera/" target="_blank">LinkedIn</a></p>
-        </div>
-      </article>
-      <article class="person-block" id="daria">
-        <div class="person-block-media"><img src="assets/img/labmember4.jpg" alt="Daria Nogina"/></div>
-        <div class="person-block-body">
-          <h4>Daria Nogina </h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p class="links"><a href="https://noginadaria.github.io/" target="_blank">Website</a></p>
-        </div>
-      </article>
+      <h3>People</h3>
+      <div id="people-list"></div>
     </section>
 
     <section class="section" style="padding-top:0">
@@ -93,7 +28,8 @@
     </section>
   </main>
 
-  <footer class="footer">© 2025 Geometry and the City Lab</footer>
+  <div data-include="assets/partials/footer.html"></div>
   <script src="assets/js/script.js"></script>
+  <script src="assets/scripts/people_script.js"></script>
 </body>
 </html>

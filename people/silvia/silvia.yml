@@ -1,0 +1,10 @@
+id: silvia
+name: Prof. Silvia Sellán
+role: PI
+image: assets/img/labmember3.jpg
+bio: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+links:
+  - label: Website
+    url: https://www.silviasellan.com/
+home_display: true

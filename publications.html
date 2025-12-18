@@ -7,19 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/publications.css" />
+  <script src="assets/scripts/includes.js" defer></script>
 </head>
 <body>
-  <header class="main">
-    <div class="logo"><a href="index.html" aria-label="Go to Home"><img src="assets/img/lab_logo.png" alt="Lab Logo" /></a></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="people.html">People</a>
-      <a href="publications.html">Publications</a>
-      <a href="join.html">Join Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div data-include="assets/partials/header.html"></div>
 
   <main class="main container-narrow">
   <section class="section" style="padding-top:1rem">
@@ -37,7 +28,7 @@
 <script src="assets/scripts/publications_script.js"></script>
 
 
-  <footer class="footer">© 2025 Geometry and the City Lab</footer>
+  <div data-include="assets/partials/footer.html"></div>
   <!-- <script src="assets/js/script.js"></script> -->
 </body>
 </html>

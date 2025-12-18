@@ -98,3 +98,5 @@ const cards = document.getElementsByClassName('card'); // Remove the dot
 Array.from(cards).forEach(card => {
     generateSDFBackground(card, 300, 300, '#FFFFFF', '#ab2673', '#6CACE4', 0.5);
 });
+
+

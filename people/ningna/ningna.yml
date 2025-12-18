@@ -1,0 +1,10 @@
+id: ningna
+name: Dr. Ningna Wang
+role: Postdoc
+image: assets/img/labmember2.jpg
+bio: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+links:
+  - label: Website
+    url: https://ningnawang.github.io/
+home_display: true
