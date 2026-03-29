@@ -3,7 +3,13 @@
   const root = document.getElementById('pub-root');
   if (!root) return;
 
-  const HIGHLIGHT_AUTHORS = [/silvia\s*sellán/i]; // bold these names if found
+  const HIGHLIGHT_AUTHORS = [
+  /silvia\s*sellán/i,
+  /ningna\s*wang/i,
+  /xiana\s*carrera/i,
+  /daria\s*nogina/i,
+  /hyunwoo\s*kim/i
+]; // bold these names if found
 
   function formatAuthors(authors) {
     if (!Array.isArray(authors)) return '';
@@ -43,7 +49,7 @@
           <img src="${imgSrc}" alt="${title} image" />
         </div>
         <div class="pub-body">
-          <h4>${title}${year}</h4>
+          <h4>${title}</h4>
           <div class="authors">${authors}</div>
           ${venue}
           ${summary}
@@ -63,7 +69,8 @@
   }
 
   function render(pubs) {
-    root.innerHTML = sortPubs(pubs).map(card).join('');
+    // root.innerHTML = sortPubs(pubs).map(card).join('');
+    root.innerHTML = pubs.map(card).join('');
   }
 
   // Load JSON

@@ -1,11 +1,29 @@
 [
   {
-    "title": "Title of the latest paper",
-    "year": 2025,
-    "authors": ["A. Author", "B. Author", "Silvia Sellán"],
-    "venue": "SIGGRAPH 2025",
-    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "image": "assets/img/papers/paper1.jpg",
-    "links": { "pdf": "#", "code": "#", "video": "#" }
+    "title": "Tube Maps: Fast SPH Boundary Handling in Tubular Coordinates",
+    "year": 2026,
+    "authors": ["Daria Nogina", "Silvia Sellán"],
+    "venue": "Conditionally accepted to SIGGRAPH 2026",
+    "summary": "",
+    "image": "assets/img/paper-thumbnails/tube-maps.jpg",
+    "links": { "pdf": "", "code": "", "video": "" }
+  },
+  {
+    "title": "Dual Contouring of Signed Distance Data",
+    "year": 2026,
+    "authors": ["Xiana Carrera", "Ningna Wang", "Christopher Batty", "Oded Stein", "Silvia Sellán"],
+    "venue": "Conditionally accepted to SIGGRAPH 2026",
+    "summary": "",
+    "image": "assets/img/paper-thumbnails/dual-contouring-of-signed-distance-data.jpg",
+    "links": { "pdf": "", "code": "", "video": "" }
+  },
+  {
+    "title": "A Bayesian Approach for Task-Specific Next-Best-View Selection with Uncertain Geometry",
+    "year": 2026,
+    "authors": ["Jingsen Zhu", "Silvia Sellán", "Alexander Terenin"],
+    "venue": "Conditionally accepted to SIGGRAPH 2026",
+    "summary": "",
+    "image": "assets/img/paper-thumbnails/bayesian-next-best-view.jpg",
+    "links": { "pdf": "", "code": "", "video": "" }
   }
 ]

@@ -12,7 +12,7 @@
 .pub-body { display: grid; gap: .35rem; }
 .pub-body h4 { margin: 0; }
 .pub-body .authors { color: var(--muted); }
-.pub-body .venue { font-weight: 700; }
+.pub-body .venue { font-weight: 400; }
 .links { display: flex; gap: .5rem; flex-wrap: wrap; }
 .summary { color: #333; }
 
