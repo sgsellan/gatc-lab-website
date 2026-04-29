@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Project Title — Geometry and the City Lab</title>
+  <meta name="description" content="Short project description." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/projectpage.css" />
+  <link rel="icon" href="assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+
+  <script src="assets/scripts/includes.js" defer></script>
+</head>
+<body>
+  <div data-include="assets/partials/header.html"></div>
+
+  <main class="main project-page">
+
+    <!-- Project Hero -->
+    <section class="project-hero full-width">
+      <div class="project-hero-inner">
+        <!-- <p class="project-kicker">Research Project</p> -->
+
+        <h1>Tube Maps: Fast SPH Boundary Handling in Tubular Coordinates</h1>
+
+        
+        <!-- <p class="project-subtitle">
+          One concise sentence describing the project’s main idea and impact.
+        </p> -->
+
+        <div class="project-authors">
+        <span class="author">
+            <a href="https://noginadaria.github.io/">Daria Nogina</a><sup>1</sup>
+        </span>
+        <span>·</span>
+        <span class="author">
+            <a href="https://cs.columbia.edu/~silviasellan">Silvia Sellán</a><sup>1</sup>
+        </span>
+        </div>
+
+        <div class="project-affiliations">
+        <span><sup>1</sup> Columbia University</span><br/>
+        </div>
+
+        <div class="project-venue">
+        SIGGRAPH 2026 (conditionally accepted)
+        </div>
+
+        <!-- <div class="project-logos">
+        <a href="https://gatc.cs.columbia.edu/" target="_blank" rel="noopener">
+            <img src="assets/img/lab_logo.png" alt="Geometry in the City logo" />
+        </a>
+        <a href="https://www.columbia.edu/" target="_blank" rel="noopener">
+            <img src="assets/projects/org_logos/columbia_logo.png" alt="Columbia University logo" />
+        </a>
+        </div> -->
+
+
+
+        <div class="project-links links">
+          <a href="#">Paper</a>
+          <a href="#">arXiv</a>
+          <a href="#">Code</a>
+          <a href="#">Video</a>
+          <!-- <a href="#">Dataset</a> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaser -->
+    <section class="section">
+      <div class="project-teaser">
+        <img src="assets/projects/project_materials/tubemaps/siggraph.gif" alt="Project teaser image" />
+        <!-- <p class="caption">
+         We propose a drop-in replacement for existing implicit boundary handling methods that reduces their runtime by several orders of magnitude.
+        </p> -->
+      </div>
+    </section>
+
+    <!-- Abstract -->
+    <section class="section">
+      <h3>Abstract</h3>
+      <div class="project-text">
+        <p>
+        Smoothed Particle Hydrodynamics (SPH) simulations rely on accurately and efficiently modeling fluid-solid interactions. However, particle-based coupling strategies introduce non-deterministic discretization errors, and implicit methods achieve high accuracy at the cost of expensive numerical integration.
+        We introduce <span class="highlight">Tube Maps</span>, a drop-in replacement for SPH boundary density computation that achieves accuracy comparable to implicit methods while dramatically reducing their computational cost.
+        Our key observation is that the boundary density integral is fully determined by the local surface geometry near a fluid particle's closest point. By expressing this geometry in tubular coordinates, we reduce the original three-dimensional integral to a one-dimensional closed-form expression that can be evaluated in constant time.
+        We thus eliminate numerical quadrature and reduce boundary handling costs by one to three orders of magnitude, enabling fast and accurate SPH simulations with time-varying curved solids.
+        </p>
+      </div>
+    </section>
+
+    
+
+    <!-- Highlights -->
+    <section class="section">
+
+    <figure class="media-card">
+          <img src="assets/projects/project_materials/tubemaps/method.jpg" alt="Result 1" />
+          <!-- <figcaption>Short description of result 1.</figcaption> -->
+    </figure>
+      <div class="grid project-highlights">
+        <article class="card">
+          <h4>Core Idea</h4>
+          <p>Instead of numerical approximation, we propose a <span class="highlight">geometric</span> approximation that considers the surface's representation in tubular coordinates and 
+            converts the 3D integral into a 1D one with a closed-form analytical solution that is computable in <span class="highlight">constant time</span> from the SDF and surface curvature.</p>
+        </article>
+        <article class="card">
+          <h4>Why It Matters</h4>
+          <p>In applications from computer graphics to engineering, a fundamental part of any SPH simulation is the modeling of interactions between fluids and solids.
+            A particularly critical aspect of this solid <span class="highlight">boundary handling</span> is the computation of the contribution of each solid to the density field at each fluid particle.
+            Unfortunately, existing methods provide a sharp tradeoff between simulation speed and accuracy.
+          </p>
+        </article>
+        <article class="card">
+          <h4>Result</h4>
+          <p>Our method produces visually plausible results while reducing the cost of boundary handling by between <span class="highlight">two</span> and <span class="highlight">three</span> orders of magnitude when compared to the seminal implicit boundary handling work.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section class="section">
+      <!-- <h3>Video Presentation</h3> -->
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Project video presentation"
+          frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Media / Results -->
+    <!-- <section class="section">
+      <h3>Results</h3>
+      <div class="project-media-grid">
+        <figure class="media-card">
+          <img src="assets/images/projects/project-slug/result1.jpg" alt="Result 1" />
+          <figcaption>Short description of result 1.</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <video controls muted playsinline>
+            <source src="assets/videos/projects/project-slug/demo1.mp4" type="video/mp4">
+          </video>
+          <figcaption>Short description of video result.</figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <img src="assets/images/projects/project-slug/result2.jpg" alt="Result 2" />
+          <figcaption>Short description of result 2.</figcaption>
+        </figure>
+      </div>
+    </section> -->
+
+
+    <!-- Paper -->
+    <section class="section">
+      <h3>Paper</h3>
+      <div class="paper-embed">
+        <iframe
+          src="assets/pdfs/projects/project-slug/paper.pdf"
+          title="Project paper">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- BibTeX -->
+    <section class="section">
+      <h3>BibTeX</h3>
+      <pre class="bibtex-block"><code>@inproceedings{key2026project,
+  title     = {Tube Maps: Fast SPH Boundary Handling in Tubular Coordinates},
+  author    = {First Author and Second Author and Third Author},
+  booktitle = {Conference Name},
+  year      = {2026}
+}</code></pre>
+    </section>
+
+    <!-- Acknowledgments -->
+    <section class="section">
+      <h3>Acknowledgments</h3>
+      <div class="project-text">
+        <p>
+          Funding, collaborators, institutional support, and thanks.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-include="assets/partials/footer.html"></div>
+</body>
+</html>
