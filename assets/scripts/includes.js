@@ -1,5 +1,5 @@
 /* Lightweight client-side HTML includes for partials.
-   Usage: <div data-include="assets/partials/header.html"></div>
+   Usage: <div data-include="header.html"></div>
    This will be replaced with the file's HTML content.
 */
 (function() {
