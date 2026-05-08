@@ -21,11 +21,11 @@
 
   function linkList(links = {}) {
     const map = [
+      ['project', 'Project Page'],
       ['pdf', 'PDF'],
       ['code', 'Code'],
       ['video', 'Video'],
       ['data', 'Data'],
-      ['project', 'Project Page'],
       ['doi', 'DOI']
     ];
     const items = map
@@ -74,7 +74,7 @@
   }
 
   // Load JSON
-  fetch('data/publications.json')
+  fetch('data/publications.json?v=20260508', { cache: 'no-store' })
     .then(r => {
       if (!r.ok) throw new Error(`Failed to load publications.json (${r.status})`);
       return r.json();
