@@ -17,6 +17,14 @@
           // Replace the placeholder element entirely to avoid extra wrappers
           var tmp = document.createElement('div');
           tmp.innerHTML = html;
+          var includeUrl = new URL(src, window.location.href);
+          var includeBase = new URL('.', includeUrl);
+          tmp.querySelectorAll('[data-include-href]').forEach(function(el) {
+            el.setAttribute('href', new URL(el.getAttribute('data-include-href'), includeBase).pathname);
+          });
+          tmp.querySelectorAll('[data-include-src]').forEach(function(el) {
+            el.setAttribute('src', new URL(el.getAttribute('data-include-src'), includeBase).pathname);
+          });
           // If the partial has root element(s), adopt them; otherwise insert as-is
           var parent = node.parentNode;
           while (tmp.firstChild) {
