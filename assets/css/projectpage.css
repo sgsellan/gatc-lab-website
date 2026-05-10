@@ -299,12 +299,76 @@
 }
 
 @media (max-width: 640px) {
+  .main.project-page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow-x: hidden;
+  }
+
   .project-hero {
     padding-top: 2rem;
   }
 
+  .project-hero h1 {
+    font-size: 1.65rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  .project-authors,
+  .project-affiliations,
+  .project-venue {
+    font-size: 1rem;
+  }
+
+  .project-links {
+    gap: 0.5rem;
+  }
+
+  .project-links a {
+    padding: 6px 14px;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .project-links a i {
+    margin-right: 0.5rem;
+  }
+
   .project-subtitle {
     font-size: 1rem;
+  }
+
+  .project-page .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .project-teaser,
+  .video-embed {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .media-card {
+    padding: 0.75rem;
+  }
+
+  .project-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bibtex-block {
+    max-width: 100% !important;
+    box-sizing: border-box;
+    padding: 0.75rem;
+  }
+
+  .bibtex-block code {
+    font-size: 0.78rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
   }
 
   .paper-embed iframe {
