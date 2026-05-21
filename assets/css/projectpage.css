@@ -311,7 +311,7 @@
   }
 
   .show-on-mobile {
-    display: block;
+    display: block !important;
   }
 
   .main.project-page {
