@@ -307,7 +307,7 @@
 
 @media (max-width: 640px) {
   .hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 
   .show-on-mobile {
