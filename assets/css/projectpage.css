@@ -301,7 +301,19 @@
   line-height: 1.6;
 }
 
+.show-on-mobile {
+  display: none !important;
+}
+
 @media (max-width: 640px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .show-on-mobile {
+    display: block;
+  }
+
   .main.project-page {
     padding-left: 1rem;
     padding-right: 1rem;
