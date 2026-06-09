@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--
+  DRAFT project page for the firearm-detection benchmark (styled with the lab CSS). TO FILL IN LOCALLY:
+    - author profile links (only Silvia / Ningna / Brian are linked)
+    - the "In plain terms" URL (placeholder "#") once that page is hosted
+    - venue / acknowledgments (sponsors, 3DPSC / ASTM if desired)
+    - confirm the device count (stated as 22) and the dataset totals
+    - teaser lives at assets/img/firearm-detection/teaser.png (copied from the project repo)
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>An Adversarial Benchmark for Firearm Detection in 3D Printing</title>
+  <meta name="description" content="A public, defensive benchmark testing whether automatic detectors can flag 3D-printable regulated firearm components, even under adversarial obfuscation, at the slicer stage." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/projectpage.css" />
+  <link rel="icon" href="../assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+
+  <!-- Components the lab CSS doesn't cover yet, keyed to the lab palette -->
+  <style>
+    ul.lab-list { max-width: 850px; margin: 0 auto; color: var(--gray); line-height: 1.8; padding-left: 1.2rem; }
+    ul.lab-list li { margin: .6rem 0; }
+    /* Consistent emphasis: pink for inline emphasis, black for titles / bullet headings */
+    .project-text strong { color: var(--pink); }
+    ul.lab-list li strong, .lim { color: var(--black); font-weight: 700; }
+    .results-table { width: 100%; max-width: 850px; margin: .5rem auto 0; border-collapse: collapse; font-size: .95rem; }
+    .results-table th, .results-table td { padding: .55rem .7rem; border-bottom: 1px solid #e5e7eb; text-align: right; }
+    .results-table th:first-child, .results-table td:first-child,
+    .results-table th:nth-child(2), .results-table td:nth-child(2) { text-align: left; }
+    .results-table thead th { border-bottom: 2px solid #d0d4d9; color: var(--muted); font-weight: 700; }
+    .results-table .best { font-weight: 700; color: var(--pink); }
+    .results-table .chance { color: var(--muted); }
+    .caveat { max-width: 850px; margin: .8rem auto 0; font-size: .92rem; color: var(--muted); line-height: 1.8; }
+  </style>
+
+  <script src="../assets/scripts/includes.js" defer></script>
+</head>
+<body>
+  <div data-include="../header.html"></div>
+
+  <main class="main project-page">
+
+    <!-- Hero -->
+    <section class="project-hero full-width">
+      <div class="project-hero-inner">
+        <!-- <p class="project-kicker">Public-safety research</p> -->
+        <h1>An Adversarial Benchmark for Firearm Detection in 3D Printing</h1>
+
+        <!-- <div class="project-authors">
+          <span class="author">Shunsuke Akamatsu<sup>1</sup></span>
+          <span>·</span>
+          <span class="author">Adejuwon Fasanya<sup>1</sup></span>
+          <span>·</span>
+          <span class="author">Carl von Bonin<sup>1</sup></span>
+          <span>·</span>
+          <span class="author"><a href="../people.html#brian">Hyunwoo (Brian) Kim</a><sup>1</sup></span>
+          <span>·</span>
+          <span class="author"><a target="_blank" rel="noopener" href="https://ningnawang.github.io/">Ningna Wang</a><sup>1</sup></span>
+          <span>·</span>
+          <span class="author"><a target="_blank" rel="noopener" href="https://cs.columbia.edu/~silviasellan">Silvia Sellán</a><sup>1</sup></span>
+        </div>
+        <div class="project-affiliations"><span><sup>1</sup> Columbia University</span></div> -->
+
+        <div class="project-links links">
+          <a href="https://github.com/geometryandthecity/firearm-detection/blob/main/docs/leaderboard.html"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Leaderboard</a>
+          <a target="_blank" rel="noopener" href="https://github.com/geometryandthecity/firearm-detection"><i class="fa-solid fa-code" aria-hidden="true"></i> Code</a>
+          <a href="mailto:silviasellan@cs.columbia.edu"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Request dataset access</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaser -->
+    <section class="section">
+      <div class="project-teaser">
+        <img src="../assets/img/firearm-detection/teaser.png" alt="Four-panel illustration of a 3D printer printing an object; in the final panel a STOP sign blocks a firearm-shaped print." />
+        <p class="caption">A defensive benchmark for flagging 3D-printable regulated firearm parts at the slicer stage &mdash; before they print.</p>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="section">
+      <div class="project-text">
+        <p>3D printers can now produce functional firearms parts directly from a digital model, with no specialized skill or equipment. These
+        "ghost guns" are cheap, unregistered, untraceable, and often invisible to the metal detectors in schools,
+        theaters, and airports. Seizures of 3D-printed firearms by the NYPD rose from about 100 in 2019 to over 600 in
+        2022, reaching roughly 10% of all weapons seized in 2024, and they are now considered one of the fastest-growing
+        threats to public safety.</p>
+
+        <p>States like New York and others are passing legislation requiring firearm-blocking technology at different
+        stages of the 3D-printing pipeline. At the same time, private institutions like schools, universities, or
+        individual manufacturers are considering implementing such measures on their own.</p>
+
+        <p>These decisions are made by people with limited technical background, who may reasonably worry:
+        <strong>do we actually have the technology to enforce this?</strong> The purpose of this public code repository is
+        to answer that question. While no detector is perfect, and there will always be room for research on more robust
+        and efficient techniques, the technology is &mdash; and indeed has long been &mdash; <span class="highlight">here</span>.</p>
+      </div>
+    </section>
+
+    <!-- Caveats and assumptions -->
+    <section class="section">
+      <h3>Caveats and assumptions</h3>
+      <div class="project-text"><p>Before we jump into the conclusions, we must acknowledge some assumptions that this
+        simplified project is making:</p></div>
+      <ul class="lab-list">
+        <li><strong>One class of threat.</strong> Every "malign" file here is a
+            Machine-gun Conversion Device (MCD), the small part that converts a semi-automatic handgun into a fully
+            automatic weapon. "Benign" files are ordinary 3D models
+            (everyday scanned objects and mechanical CAD parts). The detectors decide "is this one of our known MCDs?",
+            not "is this any kind of weapon part?"</li>
+        <li><strong>We assume access to the complete 3D model.</strong> A printable firearm travels from a 3D model file
+            (<code>.obj</code>/<code>.stl</code>) to slicer software, to machine instructions (<code>.gcode</code>), to
+            the printer, to a physical object. This process reveals many intervention points: in this repository, we consider the easiest: the slicer stage, where one has access to the complete 3D model.</li>
+        <li><strong>We recognize known designs.</strong> The detectors are trained on a catalog of <em>known</em> device
+            designs and recognize those designs and disguised versions of them. A genuinely novel design that is not in
+            the catalog will go undetected.</li>
+      </ul>
+    </section>
+
+    <!-- How this benchmark works -->
+    <section class="section">
+      <h3>How this benchmark works</h3>
+      <div class="project-text">
+        <p>This benchmark has three components: a <strong>dataset</strong>, simulated <strong>adversaries</strong>, and
+        simulated <strong>detectors</strong>.</p>
+
+        <p>An <strong>adversary</strong> is an agent that tries to evade detection by modifying a device's file while
+        keeping it printable &mdash; for example, by re-posing it (rotation and translation), adding small random noise to
+        its surface, completely re-meshing it (rebuilding the surface from scratch so the underlying file is entirely
+        different), reordering the data inside the file (no change to the shape, but a different digital fingerprint),
+        appending broken or invalid geometry meant to crash a careless checker.</p>
+
+        <p>A <strong>detector</strong> is a method that looks at a (possibly adversary-modified) geometry and decides
+        whether it is one of the Glock MCDs in the dataset or not. We implement four key detectors:</p>
+      </div>
+      <ul class="lab-list">
+        <li><strong>File hashing</strong> &mdash; It computes an exact digital fingerprint of
+            the file and matches it against a list of known device files. It catches only byte-for-byte copies; any edit,
+            even one that does not change the shape, defeats it.</li>
+        <li><strong>Geometric signature</strong> &mdash; a classical, non-AI method. It computes an intrinsic "shape
+            fingerprint" from how the surface would naturally vibrate (its Laplace&ndash;Beltrami spectrum, like the
+            distinct overtones of a bell), a quantity that does not change when the object is rotated, moved, rescaled, or
+            re-meshed. It compares each connected piece of a model against the known-device fingerprints.</li>
+        <li><strong>AI-driven 3D classifier</strong> &mdash; a neural network (PointNet) that samples points across the
+            surface and learns to tell device from non-device directly from the resulting point cloud, trained to ignore
+            orientation.</li>
+        <li><strong>AI-driven 2D classifier</strong> &mdash; an image-based neural network (a multi-view CNN) that renders
+            the object from many camera angles and runs the images through the same family of model used for ordinary
+            photo classification, combining the views into one decision.</li>
+      </ul>
+      <div class="project-text">
+        <p>Finally, the <strong>dataset</strong> is private and contains, for now, <strong>28 Glock MCDs</strong>, each in
+        the form it comes in at the slicer. After applying all of the adversaries' modifications, this results in about
+        <strong>9,200 malign shapes</strong> and <strong>4,400 benign shapes</strong>. As is traditional in benchmarks
+        like these, we split the data into <em>training</em> data (which the models may look at beforehand) and held-out
+        <em>evaluation</em> data &mdash; 1,000 benign and roughly 4,000 malign shapes, about
+        <strong>5,000 shapes</strong> the models never see. Every metric we report is computed on that held-out set.</p>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section">
+      <h3>Results</h3>
+      <table class="results-table">
+        <thead><tr><th>Detector</th><th>Approach</th><th>Accuracy (AUC)</th><th>Time / file</th></tr></thead>
+        <tbody>
+          <tr><td>Geometric signature</td><td>geometry / math</td><td class="best">1.0000</td><td>107 ms</td></tr>
+          <tr><td>AI-driven 2D classifier</td><td>AI (images)</td><td class="best">0.9989</td><td>119 ms</td></tr>
+          <tr><td>AI-driven 3D classifier</td><td>AI (point cloud)</td><td class="best">0.9938</td><td>46 ms</td></tr>
+          <tr><td>File hashing</td><td>industry status quo</td><td class="chance">0.50</td><td>1 ms</td></tr>
+        </tbody>
+      </table>
+      <div class="project-text">
+        <p>The accuracy reported above is the "area under the curve", the traditional metric for evaluating binary classifiers: 1.0 is perfect, while 0.5 is as good as a coin flip. The
+        <strong>geometric signature is essentially perfect</strong>: a 1.0000 AUC (0.99999809), raising zero false alarms
+        across all 1,000 benign models and missing only 2 of the ~4,000 evaluation devices. Crucially, no single adversary manages to pull any of the three real detectors below ~99% accuracy. And detection is
+        <strong>fast</strong>: from about 1&nbsp;millisecond per file for hashing to roughly 50&ndash;120&nbsp;milliseconds
+        for the geometry and AI methods &mdash; comfortably within the budget of a model upload or a slicing step, so
+        screening adds no perceptible delay.</p>
+      </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="section">
+      <h3>Conclusion</h3>
+      <div class="project-text">
+        <p><strong>The technology is there.</strong> Even the most basic baselines (a decades-old geometric
+        signature and standard off-the-shelf neural networks that are well obsolete by now) reach near-perfect accuracy, and they do so on a
+        small dataset, under active disguise. Every method here was trained and evaluated on a single
+        <strong>MacBook Air</strong>, with a fraction of the data and compute available to an industry lab, a government,
+        or even most volunteer-run open-source projects.</p>
+        <p>If a working detector is this reachable (on a laptop, by a small academic team, with limited data) then the technology to underpin these emerging policies is well within reach. The open question is no
+        longer <em>whether</em> it can be done, but how to standardize, govern, and scale it responsibly.</p>
+      </div>
+    </section>
+
+    <!-- Limitations -->
+    <section class="section">
+      <h3>Limitations</h3>
+      <div class="project-text"><p>This shows the technology is there; of course, this is a prototype, and it still lacks
+        important components one would need before deployment:</p></div>
+      <ul class="lab-list">
+        <li><span class="lim">Glock MCDs only.</span> This works on Glock MCDs because they are the most represented class
+            in our private dataset. The methods themselves are generic, and there is no reason to expect they would behave
+            differently on other classes of regulated parts &mdash; extending coverage is largely a matter of adding data.</li>
+        <li><span class="lim">Guaranteed error rates need more data and compute.</span> To guarantee the false-positive
+            (below 0.01%, or 1 in 10,000) and false-negative (below 0.1%, or 1 in 1,000) rates one would want for
+            deployment, we would need to train and evaluate on 10&ndash;100&times; larger datasets. We already have the
+            necessary data; it is purely a matter of computational resources. Everything here was run on a personal laptop
+            for safety &mdash; to avoid copying the real MCD data onto a shared lab server &mdash; but we have no doubt the
+            target rates are achievable with even modest university-scale resources.</li>
+        <li><span class="lim">No data governance yet.</span> There is no shared, governed dataset: for others to train and
+            validate their own detectors, we need a safe way to share this protected data, add new designs to it, and keep
+            proper records.</li>
+        <li><span class="lim">Novel designs are the hard case.</span> The detectors recognize known designs and their
+            disguises; a brand-new design absent from the catalog is the most likely real-world evasion, and would need
+            methods that reason about whether a geometry <em>could function</em> as a device rather than whether it
+            resembles a known one.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <div data-include="../footer.html"></div>
+</body>
+</html>
