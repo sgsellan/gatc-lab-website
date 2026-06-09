@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tube Maps: Fast SPH Boundary Handling in Tubular Coordinates</title>
+  <meta name="description" content="Tube Maps: Fast SPH Boundary Handling in Tubular Coordinates project page." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/projectpage.css" />
+  <link rel="icon" href="../assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+
+  <style>
+    .project-page-tight .project-links .disabled-link {
+      pointer-events: none;
+      cursor: not-allowed;
+      background: #e5e7eb;
+      border-color: #cbd5e1;
+      color: #5c616c;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .project-page-tight .project-links .disabled-link:hover {
+      background: #e5e7eb;
+      border-color: #cbd5e1;
+      color: #6b7280;
+      transform: none;
+    }
+
+    .project-page-tight .section {
+      gap: 0.35rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .project-page-tight .section h3 {
+      margin: 0 0 1rem;
+    }
+
+    .project-page-tight .project-text p,
+    .project-page-tight .bibtex-block {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  </style>
+
+  <script src="../assets/scripts/includes.js" defer></script>
+</head>
+<body>
+  <div data-include="../header.html"></div>
+
+  <main class="main project-page project-page-tight">
+
+    <!-- Project Hero -->
+    <section class="project-hero full-width">
+      <div class="project-hero-inner">
+
+        <h1>Tube Maps: Fast SPH Boundary Handling in Tubular Coordinates</h1>
+
+        <div class="project-authors">
+        <span class="author">
+          <!-- Make the links open in another page-->
+            <a target="_blank" rel="noopener"
+            href="https://noginadaria.github.io/">Daria Nogina</a><sup>1</sup>
+        </span>
+        <span>·</span>
+        <span class="author">
+            <a target="_blank" rel="noopener"
+            href="https://cs.columbia.edu/~silviasellan">Silvia Sellán</a><sup>1</sup>
+        </span>
+        </div>
+
+        <div class="project-affiliations">
+          <!-- Increase the horizontal space between the spans -->
+        <span><sup>1</sup> Columbia University</span> &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+        <div class="project-venue">
+        SIGGRAPH 2026
+        </div>
+
+
+        <div class="project-links links">
+          <a href="../assets/pdf/tubemaps/tubemaps.pdf"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Paper</a>
+          <a href="../assets/pdf/tubemaps/tubemaps_compressed.pdf"><i class="fa-solid fa-file-zipper" aria-hidden="true"></i> Paper (compressed)</a>
+          <a class="disabled-link" aria-disabled="true" tabindex="-1"><i class="fa-solid fa-code" aria-hidden="true"></i> Code (soon)</a>
+          <!-- <a href="#">Dataset</a> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaser -->
+    <section class="section">
+      <div class="project-teaser" style="margin-top: 10px; margin-bottom: 10px;">
+        <img src="../assets/projects/project_materials/tubemaps/siggraph.gif" alt="Project teaser image" style="border: none;" class="hide-on-mobile" />
+        <img src="../assets/img/dcsdd/dcsdd_teaser_mobile.png" alt="Project teaser image" style="border: none;" class="show-on-mobile" />
+      </div>
+    </section>
+
+    <!-- Abstract -->
+    <section class="section">
+      <h3>Abstract</h3>
+      <div class="project-text" style="text-align: justify;">
+        <p>
+        Smoothed Particle Hydrodynamics (SPH) simulations rely on accurately and efficiently modeling fluid-solid interactions. However, particle-based coupling strategies introduce non-deterministic discretization errors, and implicit methods achieve high accuracy at the cost of expensive numerical integration. 
+	We introduce <span class="highlight">Tube Maps</span>, a drop-in replacement for SPH boundary density computation that achieves accuracy comparable to implicit methods while dramatically reducing their computational cost. Our key observation is that the boundary density integral is fully determined by the local surface geometry near a fluid particle's closest point. By expressing this geometry in tubular coordinates, we reduce the original three-dimensional integral to a one-dimensional closed-form expression that can be evaluated in constant time. We thus eliminate numerical quadrature and reduce boundary handling costs by one to three orders of magnitude, enabling fast and accurate SPH simulations with time-varying curved solids.
+	</p>
+      </div>
+    </section>
+
+    <!-- BibTeX -->
+    <section class="section">
+      <h3>Cite as</h3>
+      <!-- Override bibtex block to make the code-->
+      <pre class="bibtex-block" style="max-width: 1020px;"><code>@inproceedings{Nogina2026TubeMaps,
+  title     = {Tube Maps: Fast SPH Boundary Handling in Tubular Coordinates},
+  author    = {Nogina, Daria and Sell\'{a}n, Silvia},
+  year      = {2026},
+  booktitle = {SIGGRAPH 2026 Conference Papers}
+}</code></pre>
+    </section>
+
+     <section class="section">
+      <!-- <h3>Video Presentation</h3> -->
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/or0hSkmls_8"
+          title="Project video presentation"
+          frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+
+    <!-- Acknowledgments -->
+    <section class="section">
+      <h3>Acknowledgments</h3>
+      <div class="project-text" style="text-align: justify;">
+        <p>
+	The Geometry and the City lab at Columbia University is supported
+by generous gifts from nTop, Adobe, Dandy and Braid Technologies, as well as by a sponsored research project from Dreamsports and the Columbia Engineering Interdisciplinary Research Fund. We thank Hyunwoo (Brian) Kim for technical help with prescribed motion sequences; Eitan Grinspun, Changxi Zheng and Christopher Batty for insightful conversations on fluid simulation.
+	<br>
+        We thank the authors of the 3D models used throughout this paper for making them available for academic use. See the paper for a complete list of the models and their sources.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-include="../footer.html"></div>
+</body>
+</html>
