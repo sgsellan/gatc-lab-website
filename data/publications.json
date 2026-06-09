@@ -6,7 +6,7 @@
     "venue": "SIGGRAPH 2026",
     "summary": "",
     "image": "assets/img/paper-thumbnails/tube-maps.jpg",
-    "links": { "pdf": "", "code": "", "video": "" }
+    "links": { "pdf": "assets/pdf/tubemaps/tubemaps.pdf", "code": "", "video": "https://youtu.be/or0hSkmls_8", "project": "projects/tubemaps.html" }
   },
   {
     "title": "Dual Contouring of Signed Distance Data",
