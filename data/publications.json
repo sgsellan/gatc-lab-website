@@ -24,6 +24,6 @@
     "venue": "SIGGRAPH 2026",
     "summary": "",
     "image": "assets/img/paper-thumbnails/bayesian-next-best-view.jpg",
-    "links": { "pdf": "", "code": "", "video": "" }
+    "links": { "pdf": "assets/pdf/bayesian-next-best-view/bayesian-next-best-view.pdf", "code": "https://github.com/jingsenzhu/BayesianNBV/", "video": "" }
   }
 ]
