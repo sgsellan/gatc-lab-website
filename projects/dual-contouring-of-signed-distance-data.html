@@ -48,6 +48,18 @@
       margin-top: 0;
       margin-bottom: 0;
     }
+
+    .video-embed {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .video-embed video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   </style>
 
   <script src="../assets/scripts/includes.js" defer></script>
@@ -107,7 +119,7 @@
         <div class="project-links links">
           <a href="../assets/pdf/dcsdd/dcsdd.pdf"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Paper</a>
           <a href="../assets/pdf/dcsdd/dcsdd_compressed.pdf"><i class="fa-solid fa-file-zipper" aria-hidden="true"></i> Paper (compressed)</a>
-          <a class="disabled-link" aria-disabled="true" tabindex="-1"><i class="fa-solid fa-code" aria-hidden="true"></i> Code (soon)</a>
+          <a href="https://github.com/xianacarrera/dual-contouring-of-signed-distance-data"><i class="fa-solid fa-code" aria-hidden="true"></i> Code</a>
           <!-- <a href="#">Dataset</a> -->
         </div>
       </div>
@@ -142,11 +154,29 @@
       <h3>Cite as</h3>
       <!-- Override bibtex block to make the code-->
       <pre class="bibtex-block" style="max-width: 1020px;"><code>@inproceedings{Carrera2026DCSDD,
-  title     = {Dual Contouring of Signed Distance Data},
-  author    = {Carrera, Xiana and Wang, Ningna and Batty, Christopher and Stein, Oded and Sell\'{a}n, Silvia},
-  year      = {2026},
-  booktitle = {SIGGRAPH 2026 Conference Papers}
+  author = {Carrera, Xiana and Wang, Ningna and Batty, Christopher and Stein, Oded and Sell\'{a}n, Silvia},
+  title = {Dual Contouring of Signed Distance Data},
+  year = {2026},
+  isbn = {9798400725548},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3799902.3811116},
+  doi = {10.1145/3799902.3811116},
+  booktitle = {Proceedings of the Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers},
+  articleno = {38},
+  numpages = {12},
+  series = {SIGGRAPH Conference Papers '26}
 }</code></pre>
+    </section>
+
+    <section class="section">
+      <!-- <h3>Video Presentation</h3> -->
+      <div class="video-embed">
+        <video controls playsinline preload="metadata">
+          <source src="../assets/videos/dcsdd_trailer.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+      </div>
     </section>
 
     <!-- Acknowledgments -->
