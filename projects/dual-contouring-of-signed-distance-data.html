@@ -48,6 +48,18 @@
       margin-top: 0;
       margin-bottom: 0;
     }
+
+    .video-embed {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .video-embed video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   </style>
 
   <script src="../assets/scripts/includes.js" defer></script>
@@ -142,10 +154,18 @@
       <h3>Cite as</h3>
       <!-- Override bibtex block to make the code-->
       <pre class="bibtex-block" style="max-width: 1020px;"><code>@inproceedings{Carrera2026DCSDD,
-  title     = {Dual Contouring of Signed Distance Data},
-  author    = {Carrera, Xiana and Wang, Ningna and Batty, Christopher and Stein, Oded and Sell\'{a}n, Silvia},
-  year      = {2026},
-  booktitle = {SIGGRAPH 2026 Conference Papers}
+  author = {Carrera, Xiana and Wang, Ningna and Batty, Christopher and Stein, Oded and Sell\'{a}n, Silvia},
+  title = {Dual Contouring of Signed Distance Data},
+  year = {2026},
+  isbn = {9798400725548},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3799902.3811116},
+  doi = {10.1145/3799902.3811116},
+  booktitle = {Proceedings of the Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers},
+  articleno = {38},
+  numpages = {12},
+  series = {SIGGRAPH Conference Papers '26}
 }</code></pre>
     </section>
 
@@ -153,7 +173,7 @@
       <!-- <h3>Video Presentation</h3> -->
       <div class="video-embed">
         <video controls playsinline preload="metadata">
-          <source src="assets/videos/dcsdd_trailer.mov" type="video/quicktime">
+          <source src="../assets/videos/dcsdd_trailer.mp4" type="video/mp4">
           Your browser does not support the video element.
         </video>
       </div>
@@ -178,3 +198,4 @@
   <div data-include="../footer.html"></div>
 </body>
 </html>
+

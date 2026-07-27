@@ -15,7 +15,7 @@
     "venue": "SIGGRAPH 2026",
     "summary": "",
     "image": "assets/img/paper-thumbnails/dual-contouring-of-signed-distance-data.jpg",
-    "links": { "project": "projects/dual-contouring-of-signed-distance-data.html", "pdf": "assets/pdf/dcsdd/dcsdd.pdf", "code": ""}
+    "links": { "project": "projects/dual-contouring-of-signed-distance-data.html", "pdf": "assets/pdf/dcsdd/dcsdd.pdf", "code": "https://github.com/xianacarrera/dual-contouring-of-signed-distance-data"}
   },
   {
     "title": "A Bayesian Approach for Task-Specific Next-Best-View Selection with Uncertain Geometry",
