@@ -1,1 +1,4 @@
 .DS_Store
+
+# Local deploy helper (server host/path are not public)
+scripts/publish.sh
