@@ -1,0 +1,10 @@
+id: bea
+name: Beatrice Stotz
+role: Undergrad
+image: people/bea/bea.png
+bio: |
+        Full-time student at Columbia College majoring in computer science and concentrating in Math. Interested in Computer Graphics, Cybersecurity, and Systems Programming. Beatrice is currently working on using geometric deep learning to predict the difficulties of bouldering routes and generate novel routes on existing climbing walls.
+links:
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/beatrice-stotz-08121a328
+home_display: true
