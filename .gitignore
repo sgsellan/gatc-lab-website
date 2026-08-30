@@ -2,3 +2,6 @@
 
 # Local deploy helper (server host/path are not public)
 scripts/publish.sh
+
+# Local Claude Code config (dev-server launch settings)
+.claude/
