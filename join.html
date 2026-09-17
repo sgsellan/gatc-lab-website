@@ -15,8 +15,41 @@
 <div data-include="header.html"></div>
 
 <main class="main container-narrow">
-    <h3>Open Positions</h3>
-<p>Unfortunately, we are currently not looking for any new lab members. We will update this page when new positions become available.</p>
+<section class="section" style="padding-top:1rem">
+<h3>Open Positions</h3>
+
+<div class="list">
+
+<div class="list-item">
+<h4>PhD students</h4>
+<p class="meta">Application deadline: December 15, 2026</p>
+
+<p>Our lab will be hiring at least one (potentially more) PhD student this cycle, to start in September 2027. This student’s thesis will be dedicated to the intersection of 3D geometry processing and manufacturing and, in particular, to <span class="highlight">safety in 3D printing</span>.</p>
+
+<p>More concretely, this student will lead our lab’s efforts on designing algorithms that can <span class="highlight">detect firearms during the 3D printing process</span>. Given the danger of 3D-printed firearms (which can be undetectable and unregistered, and are increasingly used in crime), several states (like California and New York) have enacted laws requiring 3D printers to incorporate software that detects whether the printer is being asked to print a firearm. However, existing methods are either quite easy to fool or require revamping the entire 3D printing pipeline around closed-source tools. Building from our prototype <a href="https://github.com/geometryandthecity/firearm-detection" target="_blank" rel="noopener">firearm-detection benchmark</a>, this project will build a new state of the art for this task. Many project-sized questions arise from this:</p>
+
+<ul>
+<li>At which stage of the 3D printing pipeline should detection be carried out? <a href="https://en.wikipedia.org/wiki/Slicer_(3D_printing)" target="_blank" rel="noopener">Slicers</a> have access to meshes, while printers only see <a href="https://en.wikipedia.org/wiki/G-code" target="_blank" rel="noopener">machine instructions</a>. Slicers can (maybe) access the internet or bigger memory; printers can’t. But printers know the object’s true scale…</li>
+<li>How can one validate that a set of machine instructions corresponds to a given mesh? Any slicer-level detection will need this kind of authentication.</li>
+<li>Firearms are often printed in parts: how can one detect which components can only belong to a firearm, and which ones have benign uses?</li>
+<li>…</li>
+</ul>
+
+<p>While this PhD will begin by answering these research questions in collaboration with our partners in academia, government and the non-profit sector, it will grow into broader questions about how 3D geometry processing can help promote safety and reliability in manufacturing.</p>
+
+<h4 style="margin-top:1.5rem;">How to apply</h4>
+
+<p>If you are interested, please apply to the <a href="https://www.cs.columbia.edu/education/admissions/" target="_blank" rel="noopener">Columbia Computer Science PhD program</a> and list Silvia Sellán as your preferred advisor. In your statement of purpose, you should mention your specific interest in the project described above. If you want to make your application stand out, you may (but are not required to) familiarize yourself with our <a href="https://github.com/geometryandthecity/firearm-detection" target="_blank" rel="noopener">detection benchmark</a> and use your statement to mention potential detectors and adversaries you could contribute. Please refrain from using generative AI tools for this task, as you will be asked about it in depth if selected for an interview.</p>
+
+<p>If there is any context you would like to give your application that does not fit in any of the application’s pre-set fields, feel free to contact Silvia <a href="mailto:silviasellan@cs.columbia.edu">via email</a>. <span class="highlight">We particularly encourage students from non-traditional backgrounds to apply</span>: we will consider your application in its entirety, and do not rely solely on your number of prior publications or the ranking of your undergraduate university to make admissions decisions.</p>
+
+<div style="text-align:center; margin:1.5rem 0 0.5rem;">
+<a class="qb" href="https://www.cs.columbia.edu/education/admissions/" target="_blank" rel="noopener" style="font-size:17px; padding:14px 28px;"><span class="dot"></span> Apply here</a>
+</div>
+</div>
+
+</div>
+</section>
 </main>
 
 
